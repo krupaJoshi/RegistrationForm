@@ -1,7 +1,11 @@
 package com.krupa.joshi.registration.RegistrationForm.model;
 
 import lombok.*;
+import net.bytebuddy.implementation.bind.annotation.Default;
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
@@ -16,15 +20,15 @@ public class RegistrationForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reg_id")
-    private int id;
+    private int reg_id;
 
     @Column(name = "first_name")
     @NotEmpty(message = "*Please provide a First name")
-    private String firstName;
+    private String first_name;
 
     @Column(name = "last_name")
     @NotEmpty(message = "*Please provide a Last name")
-    private String lastName;
+    private String last_name;
 
     @Column(name = "address1")
     @NotEmpty(message = "*Please provide an address1")
@@ -48,6 +52,8 @@ public class RegistrationForm {
     private String zip;
 
     @Column(name = "country")
+    @Value("${country:'US'}")
+    @NotEmpty(message = "*Please provide Country")
     private String country;
 
 
