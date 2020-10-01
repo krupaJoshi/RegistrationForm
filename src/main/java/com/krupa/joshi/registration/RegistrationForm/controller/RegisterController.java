@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class RegisterController {
@@ -35,6 +36,15 @@ public class RegisterController {
 
     return "confirmation";
 }
+
+    @GetMapping(name = "userReport", path = "/report")
+    public String getUserReport(@ModelAttribute("command") RegistrationForm regForm,
+                           ModelMap model) {
+        List<RegistrationForm> userReport = regService.findAll();
+        model.addAttribute("userReport", userReport);
+
+        return "userReport";
+    }
 
 }
 
