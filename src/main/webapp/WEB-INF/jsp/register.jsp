@@ -3,17 +3,17 @@
 <div class="container">
 	<form:form method="post" action="register">
 		<fieldset class="form-group">
-			<form:label path="firstName" id="firstName">First Name</form:label>
-			<form:input path="firstName" id="firstName" type="text" class="form-control"
+			<form:label path="first_name" id="first_name">First Name</form:label>
+			<form:input path="first_name" id="first_name" type="text" class="form-control"
 				required="required" />
-			<form:errors path="firstName" cssClass="text-warning" id="firstName"/>
+			<form:errors path="first_name" cssClass="text-warning" id="first_name"/>
 		</fieldset>
 
 		<fieldset class="form-group">
-			<form:label path="lastName" id="lastName">Last Name</form:label>
-			<form:input path="lastName" id="lastName" type="text" class="form-control"
+			<form:label path="last_name" id="last_name">Last Name</form:label>
+			<form:input path="last_name" id="last_name" type="text" class="form-control"
 						required="required" />
-			<form:errors path="lastName" cssClass="text-warning" id="lastName"/>
+			<form:errors path="last_name" cssClass="text-warning" id="last_name"/>
 		</fieldset>
 
 		<fieldset class="form-group">
@@ -25,8 +25,7 @@
 
 		<fieldset class="form-group">
 			<form:label path="address2" id="address2">Address 2</form:label>
-			<form:input path="address2" id="address2" type="text" class="form-control"
-						required="required" />
+			<form:input path="address2" id="address2" type="text" class="form-control" />
 			<form:errors path="address2" cssClass="text-warning" id="address2"/>
 		</fieldset>
 
@@ -54,7 +53,7 @@
 		<fieldset class="form-group">
 			<form:label path="country" id="country">Country</form:label>
 			<form:input path="country" type="text" class="form-control"
-						value="US" disabled="true" id="country"/>
+						required="required"	id="country"/>
 		</fieldset>
 
 		<button type="submit" class="btn btn-success">Register</button>
