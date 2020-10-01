@@ -5,6 +5,8 @@ import com.krupa.joshi.registration.RegistrationForm.repository.RegisterReposito
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RegistrationService {
     private RegisterRepository regRepository;
@@ -16,5 +18,9 @@ public class RegistrationService {
 
     public void saveUser(RegistrationForm user) {
          regRepository.save(user);
+    }
+
+    public List<RegistrationForm> findAll(){
+       return regRepository.findAll();
     }
 }
