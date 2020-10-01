@@ -1,0 +1,6 @@
+com/krupa/joshi/registration/RegistrationForm/configuration/SpringServletConfig.class
+com/krupa/joshi/registration/RegistrationForm/service/RegistrationService.class
+com/krupa/joshi/registration/RegistrationForm/model/RegistrationForm.class
+com/krupa/joshi/registration/RegistrationForm/RegistrationFormApplication.class
+com/krupa/joshi/registration/RegistrationForm/repository/RegisterRepository.class
+com/krupa/joshi/registration/RegistrationForm/controller/RegisterController.class
