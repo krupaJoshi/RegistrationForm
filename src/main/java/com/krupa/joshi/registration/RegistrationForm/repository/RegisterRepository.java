@@ -14,9 +14,5 @@ import java.util.Optional;
 @Repository
 public interface RegisterRepository extends JpaRepository<RegistrationForm, String> {
 
-    @Override
-    public default List<RegistrationForm> findAll() {
-        return null;
-    }
 
 }
