@@ -20,7 +20,7 @@ public class RegistrationService {
          regRepository.save(user);
     }
 
-    public List<RegistrationForm> findAll(){
-       return regRepository.findAll();
+    public List<RegistrationForm> findAllByOrderByReg_dateDesc(){
+        return regRepository.findAllByOrderByReg_dateDesc();
     }
 }

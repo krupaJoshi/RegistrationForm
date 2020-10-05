@@ -56,6 +56,12 @@
 						required="required"	id="country"/>
 		</fieldset>
 
+		<fieldset class="form-group" hidden="true">
+			<form:label path="reg_date" id="reg_date">Date</form:label>
+			<form:input path="reg_date" type="text" class="form-control"
+						id="reg_date"/>
+		</fieldset>
+
 		<button type="submit" class="btn btn-success">Register</button>
 	</form:form>
 </div>

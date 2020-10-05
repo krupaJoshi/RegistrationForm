@@ -19,6 +19,7 @@
 					<th>State</th>
 					<th>Zip</th>
 					<th>Country</th>
+					<th>Registration Date</th>
 				</tr>
 			</thead>
 			<tbody style="color: cornflowerblue;">
@@ -32,6 +33,7 @@
 						<td>${user.state}</td>
 						<td>${user.zip}</td>
 						<td>${user.country}</td>
+						<td>${user.reg_date}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

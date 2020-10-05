@@ -51,11 +51,13 @@ public class RegistrationForm {
     @NotEmpty(message = "*Please provide Zip Code")
     private String zip;
 
-    @Column(name = "country")
-    @Value("${country:'US'}")
+    @Column(name = "country", columnDefinition = "varchar(2) default 'US'")
     @NotEmpty(message = "*Please provide Country")
     private String country;
 
+    @Column(name = "reg_date", columnDefinition = "datetime default 'CURRENT TIMESTAMP'")
+    @NotEmpty(message = "*Please provide Country")
+    private String reg_date;
 
 }
 
