@@ -40,7 +40,7 @@ public class RegisterController {
     @GetMapping(name = "userReport", path = "/report")
     public String getUserReport(@ModelAttribute("command") RegistrationForm regForm,
                                 ModelMap model) {
-        List<RegistrationForm> userReport = regService.findAllByOrderByReg_dateDesc();
+        List<RegistrationForm> userReport = regService.findAllByOrderByCreationDate();
         model.addAttribute("userReport", userReport);
 
         return "userReport";

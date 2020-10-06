@@ -33,7 +33,7 @@
 						<td>${user.state}</td>
 						<td>${user.zip}</td>
 						<td>${user.country}</td>
-						<td>${user.reg_date}</td>
+						<td>${user.creationDate}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

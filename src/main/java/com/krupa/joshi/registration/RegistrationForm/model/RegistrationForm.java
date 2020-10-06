@@ -1,13 +1,12 @@
 package com.krupa.joshi.registration.RegistrationForm.model;
 
 import lombok.*;
-import net.bytebuddy.implementation.bind.annotation.Default;
-import org.springframework.beans.factory.annotation.Value;
-
+import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
-import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import java.time.LocalDateTime;
+
 
 @Data
 @AllArgsConstructor
@@ -51,13 +50,13 @@ public class RegistrationForm {
     @NotEmpty(message = "*Please provide Zip Code")
     private String zip;
 
-    @Column(name = "country", columnDefinition = "varchar(2) default 'US'")
+    @Column(name = "country")
     @NotEmpty(message = "*Please provide Country")
     private String country;
 
-    @Column(name = "reg_date", columnDefinition = "datetime default 'CURRENT TIMESTAMP'")
-    @NotEmpty(message = "*Please provide Country")
-    private String reg_date;
+    @CreationTimestamp
+    @Column(name = "creationDate")
+    private LocalDateTime creationDate;
 
 }
 

@@ -57,9 +57,9 @@
 		</fieldset>
 
 		<fieldset class="form-group" hidden="true">
-			<form:label path="reg_date" id="reg_date">Date</form:label>
-			<form:input path="reg_date" type="text" class="form-control"
-						id="reg_date"/>
+			<form:label path="creationDate" id="creationDate">Date</form:label>
+			<form:input path="creationDate" type="text" class="form-control"
+						id="creationDate"/>
 		</fieldset>
 
 		<button type="submit" class="btn btn-success">Register</button>
